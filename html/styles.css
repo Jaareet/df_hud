@@ -1,0 +1,238 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+.server-name img {
+    max-width: 100%;
+    height: auto;    
+    display: block; 
+    margin: 0 auto;  
+    max-height: 9vh; 
+}
+
+#qb-hud {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+}
+
+.status-container {
+    position: absolute;
+    bottom: 20px;
+    left: 27vh; 
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.money-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+.vehicle-container {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-family: 'Bebas Neue', sans-serif; /* Aplica Bebas Neue */
+    font-size: 1.6vh;
+}
+
+.status-container {
+    position: fixed;
+    margin-right: 3vh;
+    bottom: 3vh;
+    right: 1;
+}
+
+.status-bar {
+    width: 6vh;
+    height: 1.5vh;
+    background: rgba(0, 0, 0, 0.4);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 1.7vh;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+    padding-left: 3vh;
+ }
+ 
+ .status-bar .bar {
+    width: 98%; /* Limita el ancho máximo */
+    height: 100%;
+    transition: width 0.3s;
+   }
+
+ .status-bar i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 1vh;
+ }
+ 
+ .status-bar-fill {
+    height: 100%;
+    max-inline-size: 50%;
+    width: 80%;
+    transition: width 0.3s ease;
+ }
+.status-bar::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+
+.health .status-bar-fill { background: linear-gradient(90deg, rgb(200, 50, 50), rgb(200, 80, 50)); height: 1vh;  position: absolute; top: 50%; max-width: 63%; transform: translateY(-50%); border-radius: 1.7vh;}
+.armor .status-bar-fill { background: linear-gradient(90deg, rgb(255, 255, 255), rgb(255, 255, 255)); height: 1vh;  position: absolute; top: 50%; max-width: 63%; transform: translateY(-50%); border-radius: 1.7vh;}
+.hunger .status-bar-fill { background: linear-gradient(90deg, rgb(255, 140, 0), rgb(255, 180, 0)); height: 1vh;  position: absolute; top: 50%; max-width: 63%; transform: translateY(-50%); border-radius: 1.7vh;}
+.thirst .status-bar-fill { background: linear-gradient(90deg, rgb(50, 150, 255), rgb(100, 200, 255)); height: 1vh;  position: absolute; top: 50%; max-width: 63%; transform: translateY(-50%); border-radius: 1.7vh;}
+.stamina .status-bar-fill{ background: linear-gradient(90deg, rgb(255, 215, 0), rgb(255, 255, 0));height: 1vh;  position: absolute; top: 50%; max-width: 63%; transform: translateY(-50%); border-radius: 1.7vh;}
+.oxygen .status-bar-fill { background: linear-gradient(90deg, rgb(79, 72, 175), rgb(79, 102, 175));height: 1vh;  position: absolute; top: 50%; max-width: 63%; transform: translateY(-50%); border-radius: 1.7vh;}
+
+/* .health .status-bar-fill { background: rgb(255, 50, 50); }
+.armor .status-bar-fill { background: rgb(50, 150, 255); }
+.hunger .status-bar-fill { background: rgb(50, 200, 50); }
+.thirst .status-bar-fill { background: rgb(255, 165, 0); }
+.stamina .status-bar-fill { background: rgb(255, 255, 50); }
+.oxygen .status-bar-fill { background: rgb(100, 200, 255); }
+ */
+.server-info {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.server-name {
+    color: rgb(0, 255, 255);
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 2px;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+.job-info {
+    display: inline-block; /* Asegura que la caja envuelva su contenido */
+    color: white;
+    font-family: 'Bebas Neue', sans-serif; /* Aplica Bebas Neue */
+    font-size: 1.6vh;
+    text-align: center;
+    margin-bottom: 6px;
+    padding: 10px 15px; /* Añade espacio dentro de la caja */
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.5); /* Efecto de sombra para el texto */
+    gap: 5px;
+    background: rgba(0, 0, 0, 0.6); /* Fondo semitransparente para la caja */
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4); /* Sombra para dar profundidad */
+    border-radius: 6px; /* Bordes redondeados para la caja */
+    max-width: 300px; /* Ancho máximo de la caja */
+    margin: 0 auto; /* Centra la caja horizontalmente */
+}
+
+
+.money-container {
+    position: absolute;
+    top: 16vh;
+    right: 1.7vh;
+    display: flex;
+    font-family: 'Bebas Neue', sans-serif; /* Aplica Bebas Neue */
+    font-size: 1.6vh;
+    gap: 15px; /* Espaciado entre las cajas */
+    background: none; /* Elimina cualquier fondo sobrante */
+    padding: 0; /* Asegúrate de que no haya relleno extra */
+    margin: 0; /* Asegúrate de que no haya márgenes adicionales */
+    box-shadow: none; /* Por si algún sombreado estaba aplicado */
+}
+
+.money-row {
+    display: flex;
+    align-items: center; /* Centra verticalmente íconos y texto */
+    gap: 5px;
+    padding: 8px 12px; /* Espaciado interno */
+    border-radius: 6px; /* Bordes redondeados */
+    background: rgba(0, 0, 0, 0.603); /* Fondo para cada caja */
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.473); /* Sombreado para cada caja */
+}
+
+.money-row i {
+    display: flex; /* Convierte los íconos en contenedores flex */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    color: #FFF;
+    height: 1.8vh;
+    width: 1.8vh;
+    font-size: 1.3vh;
+}
+
+#cash i {
+    background: linear-gradient(180deg, #18b70b 0%, #128c08 100%);
+    border-radius: 30%;
+}
+
+#people i {
+    background: linear-gradient(180deg, #474747 0%, #252525 100%);
+    border-radius: 30%;
+}
+
+#bank i {
+    background: linear-gradient(180deg, #c70a0a 0%, #960505 100%);
+    border-radius: 30%;
+}
+
+.weapon-container {
+    position: absolute;
+    bottom: 9vh; /* Position above the speedometer */
+    right: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.6vh;
+    text-align: right;
+}
+
+#weapon-info {
+    margin-bottom: 5px;
+}
+
+#ammo-info {
+    color: #ffcc00;
+}
+
+#role { color: #00ffff; margin-bottom: 5px; }
+
+.fuel-bar {
+    width: 100px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.fuel-bar-fill {
+    height: 100%;
+    background: #0088ff;
+    transition: width 0.3s ease;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>QBCore HUD</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://cdn.dfnetwork.in/fa/css/fontawesome.css" rel="stylesheet" />
+    <link href="https://cdn.dfnetwork.in/fa/css/brands.css" rel="stylesheet" />
+    <link href="https://cdn.dfnetwork.in/fa/css/solid.css" rel="stylesheet" />
+    <link href="https://cdn.dfnetwork.in/fa/css/sharp-thin.css" rel="stylesheet" />
+    <link href="https://cdn.dfnetwork.in/fa/css/duotone-thin.css" rel="stylesheet" />
+    <link href="https://cdn.dfnetwork.in/fa/css/sharp-duotone-thin.css" rel="stylesheet" />
+    <link href="https://cdn.dfnetwork.in/fa/css/all.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="qb-hud">
+        <div class="status-container">
+            <div class="status-bar health">
+                <i class="fas fa-heart"></i>
+                <div id="health-bar" class="status-bar-fill"></div>
+            </div>
+            <div class="status-bar armor">
+                <i class="fas fa-shield-alt"></i>
+                <div id="armor-bar" class="status-bar-fill"></div>
+            </div>
+            <div class="status-bar hunger">
+                <i class="fas fa-hamburger"></i>
+                <div id="hunger-bar" class="status-bar-fill"></div>
+            </div>
+            <div class="status-bar thirst">
+                <i class="fas fa-tint"></i>
+                <div id="thirst-bar" class="status-bar-fill"></div>
+            </div>
+            <div class="status-bar stamina">
+                <i class="fas fa-running"></i>
+                <div id="stamina-bar" class="status-bar-fill"></div>
+            </div>
+            <div class="status-bar oxygen">
+                <i class="fas fa-water"></i>
+                <div id="oxygen-bar" class="status-bar-fill"></div>
+            </div>
+        </div>
+        <div class="server-info">
+            <div class="server-name">
+                <img src="https://cdn.dfnetwork.in/cambados.png" alt="Cambados RP" />
+            </div>
+            <div class="job-info"></div>
+        </div>
+        <div class="money-container">
+            <div class="money-row" id="cash">
+                <i class="fas fa-wallet"></i>
+                <span>$0</span>
+            </div>
+            <div class="money-row" id="people">
+                <i class="fas fa-money-bill"></i>
+                <span>$0</span>
+            </div>
+            <div class="money-row" id="bank">
+                <i class="fas fa-piggy-bank"></i>
+                <span>$0</span>
+            </div>
+        </div>
+        <div class="weapon-container">
+            <div id="weapon-info">Desarmado</div>
+            <div id="ammo-info"></div>
+        </div>
+        <div class="vehicle-container">
+            <div id="speed">0 km/h</div>
+            <div class="fuel-bar">
+                <div id="fuel-bar" class="fuel-bar-fill"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
