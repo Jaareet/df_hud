@@ -1,4 +1,4 @@
-SatNav = {
+--[[SatNav = {
     ["NONE"] = {icon = 0},
     ["UP"] = {icon = 1},
     ["DOWN"] = {icon = 2},
@@ -152,5 +152,5 @@ Citizen.CreateThread(function()
         Wait(0)
     end
 end)
-
+]]
 
